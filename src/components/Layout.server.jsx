@@ -10,17 +10,21 @@ export function Layout({ children }){
     preload: true
   })
 
-  const { data: { products } } = useShopQuery({
+  const productData = useShopQuery({
     query: PRODUCTS_QUERY,
     cache: CacheLong(),
     preload: true
   })
 
+  const { data: {products: {edges}}} = productData
+
 
   return (
     <>
       <h1>Layout {shop.name}</h1>
-      <h2>Products {products.edges[0].node.title}</h2>
+      {edges.map(({node}) => (
+        <h1>{node.title}</h1>
+      ))}
       {children}
     </>
   )
