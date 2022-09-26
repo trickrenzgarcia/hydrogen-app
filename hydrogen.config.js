@@ -4,10 +4,18 @@ export default defineConfig({
   shopify: {
     defaultCountryCode: 'US',
     defaultLanguageCode: 'EN',
-    storeDomain: 'kapengmatapangtest.myshopify.com',
-    storefrontToken: Oxygen?.env?.PUBLIC_STOREFRONT_API_TOKEN,
-    privateStorefrontToken: Oxygen?.env?.PRIVATE_STOREFRONT_API_TOKEN,
+    storeDomain:
+      // @ts-ignore
+      Oxygen?.env?.PUBLIC_STORE_DOMAIN || 'kapengmatapangtest.myshopify.com',
+    storefrontToken:
+      // @ts-ignore
+      Oxygen?.env?.PUBLIC_STOREFRONT_API_TOKEN,
+    privateStorefrontToken:
+      // @ts-ignore
+      Oxygen?.env?.PRIVATE_STOREFRONT_API_TOKEN,
     storefrontApiVersion: '2022-07',
+    // @ts-ignore
+    storefrontId: Oxygen?.env?.PUBLIC_STOREFRONT_ID,
   },
   session: CookieSessionStorage('__session', {
     path: '/',
