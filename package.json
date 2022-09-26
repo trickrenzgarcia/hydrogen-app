@@ -13,6 +13,7 @@
     "preview": "shopify hydrogen preview"
   },
   "devDependencies": {
+    "@netlify/hydrogen-platform": "^1.1.1",
     "@shopify/cli": "3.14.0",
     "@shopify/cli-hydrogen": "3.14.0",
     "@tailwindcss/forms": "^0.5.3",
