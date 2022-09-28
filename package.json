@@ -10,9 +10,11 @@
   "scripts": {
     "dev": "shopify hydrogen dev",
     "build": "shopify hydrogen build",
-    "preview": "shopify hydrogen preview"
+    "preview": "shopify hydrogen preview",
+    "static": "shopify hydrogen build && shopify hydrogen export"
   },
   "devDependencies": {
+    "@capacitor/cli": "^4.3.0",
     "@netlify/hydrogen-platform": "^1.1.1",
     "@shopify/cli": "3.14.0",
     "@shopify/cli-hydrogen": "3.14.0",
@@ -23,6 +25,9 @@
     "vite": "^2.9.13"
   },
   "dependencies": {
+    "@capacitor/android": "^4.3.0",
+    "@capacitor/core": "^4.3.0",
+    "@capacitor/ios": "^4.3.0",
     "@headlessui/react": "^1.7.2",
     "@shopify/hydrogen": "^1.4.2",
     "@tailwindcss/typography": "^0.5.7",
