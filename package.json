@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "shopify hydrogen dev",
-    "build": "shopify hydrogen build --entry src/App.server --target node",
+    "build": "shopify hydrogen build",
     "preview": "shopify hydrogen preview"
   },
   "devDependencies": {
