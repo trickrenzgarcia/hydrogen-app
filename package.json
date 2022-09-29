@@ -9,9 +9,8 @@
   },
   "scripts": {
     "dev": "shopify hydrogen dev",
-    "build": "shopify hydrogen build",
-    "preview": "shopify hydrogen preview",
-    "static": "shopify hydrogen build && shopify hydrogen export"
+    "build": "shopify hydrogen build --entry src/App.server --target node",
+    "preview": "shopify hydrogen preview"
   },
   "devDependencies": {
     "@capacitor/cli": "^4.3.0",
