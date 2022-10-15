@@ -9,11 +9,12 @@
   },
   "scripts": {
     "dev": "shopify hydrogen dev",
-    "build": "shopify hydrogen build",
-    "preview": "shopify hydrogen preview"
+    "build": "shopify hydrogen build --target node",
+    "preview": "shopify hydrogen preview",
+    "run-node": "node dist/node",
+    "build-mobile": "shopify hydrogen build --target node && npx cap sync"
   },
   "devDependencies": {
-    "@capacitor/cli": "^4.3.0",
     "@netlify/hydrogen-platform": "^1.1.1",
     "@shopify/cli": "3.14.0",
     "@shopify/cli-hydrogen": "3.14.0",
@@ -24,17 +25,19 @@
     "vite": "^2.9.13"
   },
   "dependencies": {
-    "@capacitor/android": "^4.3.0",
-    "@capacitor/core": "^4.3.0",
-    "@capacitor/ios": "^4.3.0",
     "@headlessui/react": "^1.7.2",
     "@shopify/hydrogen": "^1.4.2",
     "@tailwindcss/typography": "^0.5.7",
+    "body-parser": "^1.20.0",
     "clsx": "^1.2.1",
+    "compression": "^1.7.4",
+    "connect": "^3.7.0",
+    "path": "^0.12.7",
     "postcss-preset-env": "^7.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-use": "^17.4.0",
+    "serve-static": "^1.15.0",
     "typographic-base": "^1.0.4"
   },
   "author": "trick"
