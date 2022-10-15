@@ -79,3 +79,6 @@ jspm_packages/
 
 # Vite output
 dist
+
+# Mobile Development
+android/
